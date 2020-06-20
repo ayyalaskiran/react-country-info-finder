@@ -1,0 +1,141 @@
+$font-size-title: 22px;
+$font-size-subtitle: 17px;
+
+$font-weight-light: 300;
+$font-weight-normal: 600;
+$font-weight-bold: 800;
+
+.filters {
+
+    &__box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 50px 80px;
+
+      .search {
+        display: flex;
+        height: 56px;
+        max-width: 478px;
+        width: 100%;
+        border-radius: 4px;
+        margin-right: 75px;
+
+        &__icon {
+          align-self: center;
+          width: 17px;
+          height: 17px;
+          padding: 0 13px 0 31px;
+        }
+
+        &__input {
+          padding: 20px 12px 18px 12px;
+          border: none;
+          height: min-content;
+          background-color: transparent;
+          align-self: center;
+          letter-spacing: .4px;
+          font-size: 13px;
+          width: 100%;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .filter {
+        cursor: pointer;
+        max-width: 166px;
+        width: 100%;
+        padding: 20px 12px 18px 20px;
+        color: #fff;
+        border-radius: 4px;
+        border: none;
+        background-repeat: no-repeat;
+        background-size: 48px 10px;
+        background-position-x: right;
+        background-position-y: center;
+      }
+
+      .list {
+        border-radius: 4px;
+        position: absolute;
+        max-width: 200px;
+        width: 100%;
+        padding: 0;
+        right: 0;
+        margin: 64px 80px 0 0;
+        list-style: none;
+
+        > li {
+          cursor: pointer;
+          padding: 6px 24px 6px 24px;
+
+          &:first-child {
+            padding-top: 12px;
+          }
+
+          &:last-child {
+            padding-bottom: 12px;
+          }
+
+          &:hover {
+            background-color: #fafafa;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+@media screen and (max-width: 768px) {
+.filters {
+
+    &__box {
+      padding: 50px 30px;
+      flex-direction: column;
+
+      .search {
+        max-width: inherit;
+        height: 93px;
+        margin-right: 0;
+        margin-bottom: 84px;
+
+        &__input {
+          font-size: 23px;
+        }
+
+        &__icon {
+          padding: 0 40px 0 64px;
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      .filter {
+        padding: 33px 12px 18px 45px;
+        max-width: calc(100% - 56px);
+        background-size: 60px 13px;
+        height: 40px;
+        font-size: 23px;
+      }
+
+      .list {
+        width: calc(100% - 60px);
+        font-size: 23px;
+        max-width: inherit;
+        right: inherit;
+        top: 90px;
+
+        > li {
+          padding: 9px 24px 9px 46px;
+
+          &:first-child {
+            padding-top: 32px;
+          }
+        }
+      }
+    }
+  }
+}

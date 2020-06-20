@@ -1,0 +1,70 @@
+$font-size-title: 22px;
+$font-size-subtitle: 17px;
+
+$font-weight-light: 300;
+$font-weight-normal: 600;
+$font-weight-bold: 800;
+
+.header {
+    &__box {
+      margin: 0 auto;
+      max-width: 1440px;
+      width: 100%;
+      
+      .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 80px;
+      }
+
+      .title {
+        font-size: $font-size-title;
+        font-weight: $font-weight-bold;
+      }
+
+      .button {
+        cursor: pointer;
+        margin-top: 5px;
+        display: flex;
+
+        .title {
+          font-weight: $font-weight-normal;
+          font-size: $font-size-subtitle;
+        }
+
+        .icon {
+          width: 17px;
+          height: 20px;
+          margin-right: 9px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .header {
+
+      &__box {
+        .row {
+          padding: 64px 30px 60px 30px;
+        }
+
+        .title {
+          font-size: 26px;
+        }
+
+        .button {
+          margin-top: 0;
+
+          .title {
+            font-size: 26px;
+          }
+
+          .icon {
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+    }
+  }
